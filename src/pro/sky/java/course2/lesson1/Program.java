@@ -2,7 +2,7 @@ package pro.sky.java.course2.lesson1;
 
 /**
  * @author Askar Gizatullin
- * @version 1.1
+ * @version 1.2
  */
 public class Program {
     public static void main(String[] args) {
@@ -135,5 +135,30 @@ public class Program {
 
         Car car10 = new Car("Hyundai", "Avante", "South Korea", 2016, 1.6, "orange");
         car10.getInfo();
+
+        System.out.println();
+
+
+        ////////// HOMEWORK 3 //////////
+        ////////// Task 1 //////////
+
+        System.out.println("HOMEWORK 3");
+        System.out.println("Task 1\n");
+
+        Human human9 = new Human("Петя", "Санкт-Петербург", -1992, "Инженер");
+        human9.getAcquainted();
+
+        Human human10 = new Human();
+        human10.getAcquainted();
+
+        System.out.println();
+
+
+        ////////// Task 2 //////////
+
+        System.out.println("Task 2\n");
+
+        Car car11 = new Car();
+        car11.getInfo();
     }
 }

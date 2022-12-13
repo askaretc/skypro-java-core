@@ -2,7 +2,7 @@ package pro.sky.java.course2.lesson1;
 
 /**
  * @author Askar Gizatullin
- * @version 1.1
+ * @version 1.2
  */
 public class Car {
 
@@ -18,7 +18,13 @@ public class Car {
      * @since 1.0
      */
     Car() {
-
+        String defaultValue = "default";
+        model = defaultValue;
+        brand = defaultValue;
+        productionCountry = defaultValue;
+        engineVolume = 1.5;
+        color = "white";
+        productionYear = 2000;
     }
 
     /**
