@@ -2,7 +2,7 @@ package pro.sky.java.course2.lesson1;
 
 /**
  * @author Askar Gizatullin
- * @version 1.0
+ * @version 1.1
  */
 public class Human {
 
@@ -10,6 +10,24 @@ public class Human {
     String name;
     String town;
     String job;
+
+
+    /**
+     * @since 1.0
+     */
+    Human() {
+
+    }
+
+    /**
+     * @since 1.1
+     */
+    Human(String name, String town, int yearOfBirth, String job) {
+        this.name = name;
+        this.town = town;
+        this.yearOfBirth = yearOfBirth;
+        this.job = job;
+    }
 
 
     void getAcquainted() {

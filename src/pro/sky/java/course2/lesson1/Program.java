@@ -2,7 +2,7 @@ package pro.sky.java.course2.lesson1;
 
 /**
  * @author Askar Gizatullin
- * @version 1.0
+ * @version 1.1
  */
 public class Program {
     public static void main(String[] args) {
@@ -92,5 +92,48 @@ public class Program {
         car5.engineVolume = 1.6;
         car5.color = "orange";
         car5.getInfo();
+
+        System.out.println();
+
+
+        ////////// HOMEWORK 2 //////////
+        ////////// Task 1 //////////
+
+        System.out.println("HOMEWORK 2");
+        System.out.println("Task 1\n");
+
+        Human human5 = new Human("Максим", "Минск", 1987, "Бренд-менеджер");
+        human5.getAcquainted();
+
+        Human human6 = new Human("Аня", "Москва", 1993, "Методист образовательных программ");
+        human6.getAcquainted();
+
+        Human human7 = new Human("Катя", "Калиниград", 1994, "Продакт-менеджер");
+        human7.getAcquainted();
+
+        Human human8 = new Human("Артем", "Москва", 1995, "Директор по развитию бизнеса");
+        human8.getAcquainted();
+
+        System.out.println();
+
+
+        ////////// Task 2 //////////
+
+        System.out.println("Task 2\n");
+
+        Car car6 = new Car("Lada", "Grande", "Russia", 2015, 1.7, "yellow");
+        car6.getInfo();
+
+        Car car7 = new Car("Audi", "A8 50 L TDI quattro", "Germany", 2020, 3.0, "black");
+        car7.getInfo();
+
+        Car car8 = new Car("BMW", "Z8", "Germany", 2021, 3.0, "black");
+        car8.getInfo();
+
+        Car car9 = new Car("Kia", "Sportage 4 generation", "South Korea", 2018, 2.4, "red");
+        car9.getInfo();
+
+        Car car10 = new Car("Hyundai", "Avante", "South Korea", 2016, 1.6, "orange");
+        car10.getInfo();
     }
 }
