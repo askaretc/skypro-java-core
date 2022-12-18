@@ -2,9 +2,19 @@ package pro.sky.java.course2.lesson2.transport;
 
 /**
  * @author Askar Gizatullin
- * @version 2.0
+ * @version 2.1
  */
 public class Car {
+
+    private static class Key {
+        private final boolean remoteEngineStart;
+        private final boolean keylessAccess;
+
+        public Key(boolean remoteEngineStart, boolean keylessAccess) {
+            this.remoteEngineStart = remoteEngineStart;
+            this.keylessAccess = keylessAccess;
+        }
+    }
 
     private static final String DEFAULT_VALUE = "default";
     private static final int DEFAULT_PRODUCTION_YEAR = 2000;
@@ -27,6 +37,8 @@ public class Car {
     private final int seatsAmount;
     private boolean winterTire;
 
+    private final Key key;
+
 
     /**
      * Class constructor that creates a car with default values.
@@ -43,6 +55,7 @@ public class Car {
         registrationNumber = DEFAULT_VALUE;
         seatsAmount = DEFAULT_SEATS_AMOUNT;
         winterTire = false;
+        key = new Key(false, false);
     }
 
     /**
@@ -61,7 +74,7 @@ public class Car {
      * @param seatsAmount        - number of seats
      * @param winterTire         - availability of winter tires
      */
-    public Car(String brand, String model, String productionCountry, int productionYear, double engineVolume, String color, String transmission, String bodyType, String registrationNumber, int seatsAmount, boolean winterTire) {
+    public Car(String brand, String model, String productionCountry, int productionYear, double engineVolume, String color, String transmission, String bodyType, String registrationNumber, int seatsAmount, boolean winterTire, boolean remoteEngineStart, boolean keylessAccess) {
         this.brand = checkArgumentIsDefault(brand);
         this.model = checkArgumentIsDefault(model);
         this.productionCountry = checkArgumentIsDefault(productionCountry);
@@ -85,6 +98,7 @@ public class Car {
             this.seatsAmount = seatsAmount;
         }
         this.winterTire = winterTire;
+        key = new Key(remoteEngineStart, keylessAccess);
     }
 
 
@@ -206,6 +220,8 @@ public class Car {
                 "\nRegistration number: " + registrationNumber +
                 "\nSeats amount: " + seatsAmount +
                 "\nWinter tire: " + winterTire +
+                "\nRemoteEngineStart: " + key.remoteEngineStart +
+                "\nKeylessAccess: " + key.keylessAccess +
                 "\n";
     }
 }

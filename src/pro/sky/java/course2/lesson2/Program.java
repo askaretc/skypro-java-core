@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 /**
  * @author Askar Gizatullin
- * @version 2.0
+ * @version 2.1
  */
 public class Program {
 
@@ -14,16 +14,16 @@ public class Program {
 
     public static void main(String[] args) {
 
-        ////////// Task 1 //////////
+        ////////// Task 1 & 2 //////////
 
-        System.out.println("Task 1\n");
+        System.out.println("Task 1 & 2\n");
 
-        Car car1 = new Car("Audi", "A8 50 L TDI quattro", "Germany", 2020, 3.0, "black", "automatic gearbox", "sedan", "A 777 AA 777", 5, false);
+        Car car1 = new Car("Audi", "A8 50 L TDI quattro", "Germany", 2020, 3.0, "black", "automatic gearbox", "sedan", "A 777 AA 777", 5, false, true, true);
         System.out.println(car1);
         car1.setSeasonTire(CURRENT_MONTH);
         System.out.println(car1);
 
-        Car car2 = new Car("Kia", "Sportage 4 generation", "South Korea", 2018, 2.4, "red", "", "", null, -7, true);
+        Car car2 = new Car("Kia", "Sportage 4 generation", "South Korea", 2018, 2.4, "red", "", "", null, -7, true, true, false);
         System.out.println(car2);
         car2.setTransmission("automatic gearbox");
         car2.setRegistrationNumber("X 198 XX 198");
