@@ -1,5 +1,7 @@
 package pro.sky.java.course2.lesson2.transport;
 
+import java.util.Objects;
+
 /**
  * @author Askar Gizatullin
  * @version 2.1
@@ -13,6 +15,19 @@ public class Car {
         public Key(boolean remoteEngineStart, boolean keylessAccess) {
             this.remoteEngineStart = remoteEngineStart;
             this.keylessAccess = keylessAccess;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Key key = (Key) o;
+            return remoteEngineStart == key.remoteEngineStart && keylessAccess == key.keylessAccess;
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(remoteEngineStart, keylessAccess);
         }
     }
 
@@ -223,5 +238,18 @@ public class Car {
                 "\nRemoteEngineStart: " + key.remoteEngineStart +
                 "\nKeylessAccess: " + key.keylessAccess +
                 "\n";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return productionYear == car.productionYear && Double.compare(car.engineVolume, engineVolume) == 0 && seatsAmount == car.seatsAmount && winterTire == car.winterTire && Objects.equals(brand, car.brand) && Objects.equals(model, car.model) && Objects.equals(productionCountry, car.productionCountry) && Objects.equals(color, car.color) && Objects.equals(transmission, car.transmission) && Objects.equals(bodyType, car.bodyType) && Objects.equals(registrationNumber, car.registrationNumber) && Objects.equals(key, car.key);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(brand, model, productionCountry, productionYear, engineVolume, color, transmission, bodyType, registrationNumber, seatsAmount, winterTire, key);
     }
 }
