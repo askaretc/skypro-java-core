@@ -131,7 +131,7 @@ public class Car {
     }
 
     public void setRegistrationNumber(String registrationNumber) {
-        this.registrationNumber = registrationNumber;
+        this.registrationNumber = checkArgumentIsDefault(registrationNumber);
     }
 
     public boolean isWinterTire() {
