@@ -164,12 +164,12 @@ public class Car extends Transport {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Car car = (Car) o;
-        return getProductionYear() == car.getProductionYear() && Double.compare(car.engineVolume, engineVolume) == 0 && seatsAmount == car.seatsAmount && winterTire == car.winterTire && Objects.equals(getBrand(), car.getBrand()) && Objects.equals(getModel(), car.getModel()) && Objects.equals(getProductionCountry(), car.getProductionCountry()) && Objects.equals(getBodyColor(), car.getBodyColor()) && Objects.equals(transmission, car.transmission) && Objects.equals(bodyType, car.bodyType) && Objects.equals(registrationNumber, car.registrationNumber) && Objects.equals(key, car.key);
+        return getProductionYear() == car.getProductionYear() && getMaximumSpeed() == car.getMaximumSpeed() && Double.compare(car.engineVolume, engineVolume) == 0 && seatsAmount == car.seatsAmount && winterTire == car.winterTire && Objects.equals(getBrand(), car.getBrand()) && Objects.equals(getModel(), car.getModel()) && Objects.equals(getProductionCountry(), car.getProductionCountry()) && Objects.equals(getBodyColor(), car.getBodyColor()) && Objects.equals(transmission, car.transmission) && Objects.equals(bodyType, car.bodyType) && Objects.equals(registrationNumber, car.registrationNumber) && Objects.equals(key, car.key);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getBrand(), getModel(), getProductionCountry(), getProductionYear(), engineVolume, getBodyColor(), transmission, bodyType, registrationNumber, seatsAmount, winterTire, key);
+        return Objects.hash(getBrand(), getModel(), getProductionCountry(), getProductionYear(), engineVolume, getBodyColor(), getMaximumSpeed(), transmission, bodyType, registrationNumber, seatsAmount, winterTire, key);
     }
 
 
