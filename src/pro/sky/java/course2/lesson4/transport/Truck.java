@@ -1,6 +1,6 @@
-package pro.sky.java.course2.lesson4;
+package pro.sky.java.course2.lesson4.transport;
 
-import java.util.Objects;
+import pro.sky.java.course2.lesson4.driver.DriverC;
 
 /**
  * Truck is a "child" class of the <code>Transport</code> class.
@@ -8,14 +8,10 @@ import java.util.Objects;
  * @author Askar Gizatullin
  * @version 1.0
  */
-public class Truck extends Transport {
+public class Truck<C extends DriverC> extends Transport {
 
-    /**
-     * Class constructor that creates a truck with default values.
-     */
-    public Truck() {
-        super("", "", 0);
-    }
+    private C driver;
+
 
     /**
      * Class constructor that creates a truck by arguments.
@@ -25,8 +21,23 @@ public class Truck extends Transport {
      * @param model        - model
      * @param engineVolume - engine capacity in liters
      */
-    public Truck(String brand, String model, double engineVolume) {
+    public Truck(String brand, String model, double engineVolume, C driver) {
         super(brand, model, engineVolume);
+        this.driver = driver;
+    }
+
+
+    public C getDriver() {
+        return driver;
+    }
+
+    public void setDriver(C driver) {
+        this.driver = driver;
+    }
+
+
+    public void printDriverStartingInformation() {
+        System.out.println(getDriver().getFullName() + " is driving " + getBrand() + " " + getModel() + " and will participate in the race.");
     }
 
 
@@ -37,6 +48,7 @@ public class Truck extends Transport {
                 "\nAmount of pit-stop: " + getAmountOfPitStop() +
                 "\nMinutes of best lap time: " + getBestLapTime() +
                 "\nMaximum speed, km/h: " + getMaximumSpeed() +
+                "\nDriver's full name: " + getDriver().getFullName() +
                 "\n";
     }
 }

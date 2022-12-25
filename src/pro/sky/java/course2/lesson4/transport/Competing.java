@@ -1,4 +1,4 @@
-package pro.sky.java.course2.lesson4;
+package pro.sky.java.course2.lesson4.transport;
 
 public interface Competing {
 

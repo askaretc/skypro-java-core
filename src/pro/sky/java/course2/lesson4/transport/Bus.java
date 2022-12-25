@@ -1,6 +1,6 @@
-package pro.sky.java.course2.lesson4;
+package pro.sky.java.course2.lesson4.transport;
 
-import java.util.Objects;
+import pro.sky.java.course2.lesson4.driver.DriverD;
 
 /**
  * Bus is a "child" class of the <code>Transport</code> class.
@@ -8,14 +8,10 @@ import java.util.Objects;
  * @author Askar Gizatullin
  * @version 2.0
  */
-public class Bus extends Transport {
+public class Bus<D extends DriverD> extends Transport {
 
-    /**
-     * Class constructor that creates a bus with default values.
-     */
-    public Bus() {
-        super("", "", 0);
-    }
+    private D driver;
+
 
     /**
      * Class constructor that creates a bus by arguments.
@@ -25,8 +21,23 @@ public class Bus extends Transport {
      * @param model        - model
      * @param engineVolume - engine capacity in liters
      */
-    public Bus(String brand, String model, double engineVolume) {
+    public Bus(String brand, String model, double engineVolume, D driver) {
         super(brand, model, engineVolume);
+        this.driver = driver;
+    }
+
+
+    public D getDriver() {
+        return driver;
+    }
+
+    public void setDriver(D driver) {
+        this.driver = driver;
+    }
+
+
+    public void printDriverStartingInformation() {
+        System.out.println(getDriver().getFullName() + " is driving " + getBrand() + " " + getModel() + " and will participate in the race.");
     }
 
 
@@ -37,6 +48,7 @@ public class Bus extends Transport {
                 "\nAmount of pit-stop: " + getAmountOfPitStop() +
                 "\nMinutes of best lap time: " + getBestLapTime() +
                 "\nMaximum speed, km/h: " + getMaximumSpeed() +
+                "\nDriver's full name: " + getDriver().getFullName() +
                 "\n";
     }
 }
