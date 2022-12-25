@@ -2,9 +2,9 @@ package pro.sky.java.course2.lesson4;
 
 public interface Competing {
 
-    void printAmountOfPitStop(int amountOfPitStop);
+    int getAmountOfPitStop();
 
-    void printBestLapTime(int minutesOfBestLapTime);
+    int getBestLapTime();
 
-    void  printMaximumSpeed(int maximumSpeed);
+    int getMaximumSpeed();
 }

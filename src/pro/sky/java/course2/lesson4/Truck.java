@@ -31,25 +31,12 @@ public class Truck extends Transport {
 
 
     @Override
-    public void startMoving() {
-        System.out.println("The truck starts moving.");
-    }
-
-    @Override
-    public void finishMoving() {
-        System.out.println("The truck finishes moving.");
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Truck truck = (Truck) o;
-        return getEngineVolume() == truck.getEngineVolume() && Objects.equals(getBrand(), truck.getBrand()) && Objects.equals(getModel(), truck.getModel());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getBrand(), getModel(), getEngineVolume());
+    public String toString() {
+        return "Brand & Model: " + getBrand() + " " + getModel() +
+                "\nEngine volume, L: " + getEngineVolume() +
+                "\nAmount of pit-stop: " + getAmountOfPitStop() +
+                "\nMinutes of best lap time: " + getBestLapTime() +
+                "\nMaximum speed, km/h: " + getMaximumSpeed() +
+                "\n";
     }
 }

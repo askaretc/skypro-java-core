@@ -31,32 +31,12 @@ public class Car extends Transport {
 
 
     @Override
-    public void startMoving() {
-        System.out.println("The car starts moving.");
-    }
-
-    @Override
-    public void finishMoving() {
-        System.out.println("The car finishes moving.");
-    }
-
-    @Override
     public String toString() {
         return "Brand & Model: " + getBrand() + " " + getModel() +
                 "\nEngine volume, L: " + getEngineVolume() +
+                "\nAmount of pit-stop: " + getAmountOfPitStop() +
+                "\nMinutes of best lap time: " + getBestLapTime() +
+                "\nMaximum speed, km/h: " + getMaximumSpeed() +
                 "\n";
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Car car = (Car) o;
-        return getEngineVolume() == car.getEngineVolume() && Objects.equals(getBrand(), car.getBrand()) && Objects.equals(getModel(), car.getModel());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getBrand(), getModel(), getEngineVolume());
     }
 }
