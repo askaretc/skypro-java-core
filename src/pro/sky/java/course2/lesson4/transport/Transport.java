@@ -113,7 +113,7 @@ public abstract class Transport implements Competing {
      * @return <code>DEFAULT_VALUE</code> if string value is specified incorrectly, contains null or empty;
      * <code>stringValue</code> otherwise.
      */
-    private final String validateStringArgument(String stringValue) {
+    private String validateStringArgument(String stringValue) {
         if (stringValue == null || stringValue.isEmpty() || stringValue.isBlank()) {
             return DEFAULT_VALUE;
         } else {
