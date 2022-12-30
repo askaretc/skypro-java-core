@@ -56,7 +56,7 @@ public class Bus<D extends DriverD> extends Transport {
         if (busCapacity == null) {
             System.out.println("Данных по транспортному средству недостаточно");
         } else {
-            System.out.println("Тип транспортного средства: " + getBusCapacity().name());
+            System.out.println("Тип транспортного средства: " + getBusCapacity().name() + " (" + getBusCapacity().toString() + ")");
         }
     }
 

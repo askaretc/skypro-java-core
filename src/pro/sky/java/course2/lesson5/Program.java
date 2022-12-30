@@ -3,7 +3,12 @@ package pro.sky.java.course2.lesson5;
 import pro.sky.java.course2.lesson5.driver.DriverB;
 import pro.sky.java.course2.lesson5.driver.DriverC;
 import pro.sky.java.course2.lesson5.driver.DriverD;
-import pro.sky.java.course2.lesson5.transport.*;
+import pro.sky.java.course2.lesson5.transport.Bus;
+import pro.sky.java.course2.lesson5.transport.Car;
+import pro.sky.java.course2.lesson5.transport.Truck;
+import pro.sky.java.course2.lesson5.transport.CarBodyType;
+import pro.sky.java.course2.lesson5.transport.BusCapacity;
+import pro.sky.java.course2.lesson5.transport.TruckCapacityType;
 
 /**
  * @author Askar Gizatullin

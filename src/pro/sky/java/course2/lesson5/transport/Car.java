@@ -56,7 +56,7 @@ public class Car<B extends DriverB> extends Transport {
         if (carBodyType == null) {
             System.out.println("Данных по транспортному средству недостаточно");
         } else {
-            System.out.println("Тип транспортного средства: " + getCarBodyType().name());
+            System.out.println("Тип транспортного средства: " + getCarBodyType().name() + " (" + getCarBodyType().toString() + ")");
         }
     }
 

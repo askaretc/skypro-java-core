@@ -22,11 +22,11 @@ public enum BusCapacity {
     }
 
 
-    public float getLowerLimit() {
+    public int getLowerLimit() {
         return lowerLimit;
     }
 
-    public float getUpperLimit() {
+    public int getUpperLimit() {
         return upperLimit;
     }
 

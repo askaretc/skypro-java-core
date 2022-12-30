@@ -56,7 +56,7 @@ public class Truck<C extends DriverC> extends Transport {
         if (truckCapacityType == null) {
             System.out.println("Данных по транспортному средству недостаточно");
         } else {
-            System.out.println("Тип транспортного средства: " + getTruckCapacityType().name());
+            System.out.println("Тип транспортного средства: " + getTruckCapacityType().name() + " (" + getTruckCapacityType().toString() + ")");
         }
     }
 
