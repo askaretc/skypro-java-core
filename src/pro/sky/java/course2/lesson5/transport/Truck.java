@@ -12,6 +12,8 @@ public class Truck<C extends DriverC> extends Transport {
 
     private C driver;
 
+    private TruckCapacityType truckCapacityType;
+
 
     /**
      * Class constructor that creates a truck by arguments.
@@ -35,11 +37,28 @@ public class Truck<C extends DriverC> extends Transport {
         this.driver = driver;
     }
 
+    public TruckCapacityType getTruckCapacityType() {
+        return truckCapacityType;
+    }
+
+    public void setTruckCapacityType(TruckCapacityType truckCapacityType) {
+        this.truckCapacityType = truckCapacityType;
+    }
+
 
     public void printDriverStartingInformation() {
         System.out.println(getDriver().getFullName() + " is driving " + getBrand() + " " + getModel() + " and will participate in the race.");
     }
 
+
+    @Override
+    public void printType() {
+        if (truckCapacityType == null) {
+            System.out.println("Данных по транспортному средству недостаточно");
+        } else {
+            System.out.println("Тип транспортного средства: " + getTruckCapacityType().name());
+        }
+    }
 
     @Override
     public String toString() {

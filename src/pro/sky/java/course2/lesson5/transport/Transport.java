@@ -39,6 +39,9 @@ public abstract class Transport implements Competing {
     }
 
 
+    public abstract void printType();
+
+
     public void startMoving() {
         System.out.println("The " + getBrand() + " " + getModel() + " starts moving.");
     }

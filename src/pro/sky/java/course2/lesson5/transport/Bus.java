@@ -12,6 +12,8 @@ public class Bus<D extends DriverD> extends Transport {
 
     private D driver;
 
+    private BusCapacity busCapacity;
+
 
     /**
      * Class constructor that creates a bus by arguments.
@@ -35,11 +37,28 @@ public class Bus<D extends DriverD> extends Transport {
         this.driver = driver;
     }
 
+    public BusCapacity getBusCapacity() {
+        return busCapacity;
+    }
+
+    public void setBusCapacity(BusCapacity busCapacity) {
+        this.busCapacity = busCapacity;
+    }
+
 
     public void printDriverStartingInformation() {
         System.out.println(getDriver().getFullName() + " is driving " + getBrand() + " " + getModel() + " and will participate in the race.");
     }
 
+
+    @Override
+    public void printType() {
+        if (busCapacity == null) {
+            System.out.println("Данных по транспортному средству недостаточно");
+        } else {
+            System.out.println("Тип транспортного средства: " + getBusCapacity().name());
+        }
+    }
 
     @Override
     public String toString() {

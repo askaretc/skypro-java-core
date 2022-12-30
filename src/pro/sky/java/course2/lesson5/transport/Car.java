@@ -12,6 +12,8 @@ public class Car<B extends DriverB> extends Transport {
 
     private B driver;
 
+    private CarBodyType carBodyType;
+
 
     /**
      * Class constructor that creates a car by arguments.
@@ -35,11 +37,28 @@ public class Car<B extends DriverB> extends Transport {
         this.driver = driver;
     }
 
+    public CarBodyType getCarBodyType() {
+        return carBodyType;
+    }
+
+    public void setCarBodyType(CarBodyType carBodyType) {
+        this.carBodyType = carBodyType;
+    }
+
 
     public void printDriverStartingInformation() {
         System.out.println(getDriver().getFullName() + " is driving " + getBrand() + " " + getModel() + " and will participate in the race.");
     }
 
+
+    @Override
+    public void printType() {
+        if (carBodyType == null) {
+            System.out.println("Данных по транспортному средству недостаточно");
+        } else {
+            System.out.println("Тип транспортного средства: " + getCarBodyType().name());
+        }
+    }
 
     @Override
     public String toString() {
