@@ -20,6 +20,9 @@ import java.util.List;
 public class Program {
     public static void main(String[] args) {
 
+        ////////// TASK 1 //////////
+        System.out.println("TASK 1\n");
+
         List<Driver> driverList = new ArrayList<>();
 
         DriverB driverB1 = new DriverB("Karley Drake", true, 7, "B");
@@ -108,25 +111,27 @@ public class Program {
         bus2.printCarTeamInformation();
         truck3.printCarTeamInformation();
 
-        //checkTransportsDiagnostics(car1, car2, car3, car4, truck1, truck2, truck3, truck4, bus1, bus2, bus3, bus4);
-    }
 
-    public static void checkTransportDiagnostics(Transport transport) {
-        try {
-            if (!transport.passDiagnostics()) {
-                throw new RuntimeException("The " + transport.getBrand() + " " + transport.getModel() +
-                        " has not passed diagnostics");
-            } else {
-                System.out.println("The " + transport.getBrand() + " " + transport.getModel() + " passed diagnostics");
-            }
-        } catch (RuntimeException e) {
-            System.out.println(e.getMessage());
-        }
-    }
+        ////////// TASK 2 //////////
+        System.out.println("===============================================================================\nTASK 2\n");
 
-    public static void checkTransportsDiagnostics(Transport... transports) {
-        for (Transport transport : transports) {
-            checkTransportDiagnostics(transport);
-        }
+        ServiceStation serviceStation = new ServiceStation();
+
+        serviceStation.addAutomobile(car1);
+        serviceStation.addAutomobile(car2);
+        serviceStation.addAutomobile(car3);
+        serviceStation.addAutomobile(truck1);
+
+        System.out.println("Queue before Technical Inspection:\n");
+
+        System.out.println(serviceStation.transportQueue);
+
+        System.out.println("\n");
+
+        serviceStation.conductTechnicalInspection();
+
+        System.out.println("\n\nQueue after Technical Inspection:\n");
+
+        System.out.println(serviceStation.transportQueue);
     }
 }

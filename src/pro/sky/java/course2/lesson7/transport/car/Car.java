@@ -91,6 +91,6 @@ public class Car<B extends DriverB> extends Transport {
                 "\nMinutes of best lap time: " + getBestLapTime() +
                 "\nMaximum speed, km/h: " + getMaximumSpeed() +
                 "\nDriver's full name: " + getDriver().getFullName() +
-                "\n";
+                "\n\n";
     }
 }
