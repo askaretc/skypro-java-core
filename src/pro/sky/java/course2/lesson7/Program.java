@@ -124,7 +124,7 @@ public class Program {
 
         System.out.println("Queue before Technical Inspection:\n");
 
-        System.out.println(serviceStation.transportQueue);
+        System.out.println(serviceStation.getTransportQueue());
 
         System.out.println("\n");
 
@@ -132,6 +132,6 @@ public class Program {
 
         System.out.println("\n\nQueue after Technical Inspection:\n");
 
-        System.out.println(serviceStation.transportQueue);
+        System.out.println(serviceStation.getTransportQueue());
     }
 }

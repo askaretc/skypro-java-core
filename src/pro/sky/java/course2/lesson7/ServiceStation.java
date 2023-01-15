@@ -11,7 +11,12 @@ import java.util.Queue;
 
 public class ServiceStation {
 
-    Queue<Transport> transportQueue = new LinkedList<>();
+    private final Queue<Transport> transportQueue = new LinkedList<>();
+
+
+    public Queue<Transport> getTransportQueue() {
+        return transportQueue;
+    }
 
 
     public void addAutomobile (Car<DriverB> car) {

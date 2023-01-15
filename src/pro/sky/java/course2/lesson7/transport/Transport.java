@@ -17,7 +17,7 @@ import java.util.Objects;
  */
 public abstract class Transport implements Competing {
 
-    List<Mechanic> mechanicList = new ArrayList<>();
+    private final List<Mechanic> mechanicList = new ArrayList<>();
 
 
     private static final String DEFAULT_VALUE = "default";
