@@ -1,2 +1,2 @@
-# skypro-java-core
+Java Core
 Course "Java Core" by Skypro
